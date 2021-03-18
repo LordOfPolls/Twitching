@@ -1,0 +1,13 @@
+discord~=1.0.1
+discord-py-slash-command
+aiomysql~=0.0.21
+aiomysql
+sshtunnel~=0.4.0
+fuzzywuzzy[speedup]
+colorlog~=4.7.2
+
+aiohttp~=3.7.4.post0
+twitchAPI~=2.2.5
+aiofiles~=0.6.0
+numpy~=1.20.1
+scipy~=1.6.1
