@@ -253,7 +253,7 @@ class Twitch(commands.Cog):
                             )
     async def setChannel(self, ctx: SlashContext,
                          channel: typing.Union[discord.TextChannel, discord.VoiceChannel, discord.CategoryChannel]):
-        await ctx.respond()
+        await ctx.defer()
         if not self.check_perms(ctx):
             return await ctx.send("Sorry you need manage_messages to use this command", hidden=True)
 
@@ -299,7 +299,7 @@ class Twitch(commands.Cog):
                             description="Stop posting updates",
                             )
     async def clearChannel(self, ctx: SlashContext):
-        await ctx.respond()
+        await ctx.defer()
         if not self.check_perms(ctx):
             return await ctx.send("Sorry you need manage_messages to use this command", hidden=True)
 
@@ -324,7 +324,7 @@ class Twitch(commands.Cog):
                                 )
                             ])
     async def streamerAdd(self, ctx: SlashContext, streamer: str):
-        await ctx.respond()
+        await ctx.defer()
         if not self.check_perms(ctx):
             return await ctx.send("Sorry you need manage_messages to use this command", hidden=True)
 
@@ -384,7 +384,7 @@ class Twitch(commands.Cog):
                                 )
                             ])
     async def streamerRemove(self, ctx: SlashContext, streamer: str):
-        await ctx.respond()
+        await ctx.defer()
         if not self.check_perms(ctx):
             return await ctx.send("Sorry you need manage_messages to use this command", hidden=True)
 
@@ -435,7 +435,7 @@ class Twitch(commands.Cog):
     @cog_ext.cog_subcommand(base="twitch", subcommand_group="streamer", name="list",
                             description="Posts an embed per streamer you have tracked. Good for stream links channels")
     async def twitchLinks(self, ctx):
-        await ctx.respond()
+        await ctx.defer()
         if not self.check_perms(ctx):
             return await ctx.send("Sorry you need manage_messages to use this command", hidden=True)
         try:
@@ -481,7 +481,7 @@ class Twitch(commands.Cog):
                                 )
                             ])
     async def mention(self, ctx: SlashContext, **kwargs):
-        await ctx.respond()
+        await ctx.defer()
 
         role: discord.Role = kwargs['role']
         streamerName = kwargs['streamer'].lower() if "streamer" in kwargs else "all"
