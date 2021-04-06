@@ -14,6 +14,9 @@ This bot was origionally created for the 404SMP Discord Server to provide notifi
 
 ## Examples
 
+### Commands list
+![Commands List](https://i.imgur.com/WEFaF48.png)
+
 ### Streamer Link:
 ![Streamer link example](https://i.imgur.com/HGWEOZy.png)
 
